@@ -325,8 +325,8 @@ export default class TypeScriptHelpers {
         const arrayLength = Number(split[i].split(']')[0]);
         let index = 0;
         buildType = '[';
-        while (index <= arrayLength) {
-          if (index === arrayLength) {
+        while (index < arrayLength) {
+          if (index === arrayLength - 1) {
             buildType += `${tsType}`;
             index++;
           } else {
